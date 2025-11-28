@@ -7,14 +7,14 @@
     <title>MY AESTHETIC – Russian Lips & Ästhetische Behandlungen in Berlin</title>
     <meta name="description" content="MY AESTHETIC – Studio für Russian Lips, Lip Filler, Full Face Contouring & Lemon Bottle in Berlin. Fokus auf harmonische, natürliche Ergebnisse. Termin einfach per WhatsApp anfragen." />
     <meta name="keywords" content="Russian Lips Berlin, Lip Filler Berlin, Hyaluron Lippen Berlin, Full Face Contouring Berlin, Lemon Bottle Berlin, Ästhetikstudio Berlin" />
-    <link rel="canonical" href="/" />
+    <link rel="canonical" href="https://myaesthetic.berlin/" />
     <meta name="last-modified" content="2025-11-28" />
     
     <!-- Social Media Tags -->
     <meta property="og:title" content="MY AESTHETIC – Russian Lips in Berlin" />
     <meta property="og:description" content="Russian Lips, Lip Filler & ästhetische Behandlungen mit natürlichem, harmonischem Look in Berlin." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="/" />
+    <meta property="og:url" content="https://myaesthetic.berlin/" />
     
     <!-- Geo Tags -->
     <meta name="geo.region" content="DE-BE" />
@@ -51,15 +51,18 @@
     </script>
   </head>
   <body>
-  <div id="root"></div>
-  <script type="module">
-    const pass = prompt('Passwort eingeben:');
-    if (pass === 'MY2025') {
-      import('/src/main.tsx');
-    } else {
-      document.body.innerHTML = '';
-      alert('Falsches Passwort');
-    }
-  </script>
+    <div id="root"></div>
+    <script type="module">
+      if (!window.__MY_AUTH_INITIALIZED__) {
+        window.__MY_AUTH_INITIALIZED__ = true;
+        const pass = prompt('Passwort eingeben:');
+        if (pass === 'MY2025') {
+          import('/src/main.tsx');
+        } else {
+          document.body.innerHTML = '';
+          alert('Falsches Passwort');
+        }
+      }
+    </script>
   </body>
 </html>
